@@ -1,0 +1,15 @@
+.separator |
+.import bid.dat BID
+update BID set Amount = null where Amount = -1;
+update BID set Time = null where Time = "NULL";
+update BID set BidderID = null where BidderID = "NULL";
+
+.import user.dat USER
+update USER set Location = null where Location = "NULL";
+update USER set Country = null where Country = "NULL";
+
+.import item.dat ITEM
+update ITEM set Buy_Price = null where Buy_Price = -1;
+update ITEM set Description = null where Description = "NULL";
+
+.import is_category_of.dat IsCategoryOf

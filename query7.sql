@@ -1,0 +1,6 @@
+SELECT COUNT (DISTINCT CategoryName)
+FROM IsCategoryOf
+WHERE ItemID in 
+    (SELECT ItemID
+    FROM BID
+    WHERE AMOUNT > 100)
